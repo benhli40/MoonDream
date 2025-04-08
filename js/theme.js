@@ -4,10 +4,10 @@ export function applyTimeBasedTheme() {
   const now = new Date();
   const hour = now.getHours();
 
-  if (hour >= 6 && hour < 18) {
-    setDayTheme();
-  } else {
-    setNightTheme();
+  if (hour >= 5 && hour < 7) {
+    setSunriseTheme();
+  } else if (hour >= 17 && hour < 19) {
+    setSunsetTheme();
   }
 }
 

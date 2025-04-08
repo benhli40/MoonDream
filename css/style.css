@@ -27,6 +27,24 @@ body.night {
   color: #f5f5f5;
 }
 
+body.night::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('../assets/stars.svg') repeat;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.sunrise {
+  background: linear-gradient(to top, #ffc371, #ff5f6d);
+}
+
+body.sunset {
+  background: linear-gradient(to top, #2b5876, #4e4376);
+}
+
 /* Live Clock */
 #clock-section {
   margin-top: 4rem;
