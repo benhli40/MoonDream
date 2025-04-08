@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MoonDream</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Live Clock Display -->
+  <section id="clock-section">
+    <h1 id="live-time">--:--</h1>
+    <p class="subtitle">Let the moon guide your rhythm</p>
+  </section>
+
+  <!-- Sleep Planner -->
+  <section id="planner-section">
+    <h2>Plan Your Sleep</h2>
+    
+    <div class="planner-options">
+      <label for="wake-time">I want to wake up at:</label>
+      <input type="time" id="wake-time" />
+      <button id="calculate-sleep">Show Sleep Times</button>
+    </div>
+
+    <div id="sleep-results"></div>
+  </section>
+
+  <!-- Moon Phase Placeholder -->
+  <section id="moon-visual"></section>
+
+  <!-- Footer (optional version info or credits) -->
+  <footer>
+    <p>Made with ✨ by Benjamin Lisle • MoonDream</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

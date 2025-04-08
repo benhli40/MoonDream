@@ -1,0 +1,215 @@
+/* Reset and base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0b0c1c;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+body.day {
+  background-color: #f5f7fa;
+  color: #1e1e2f;
+}
+
+body.day #clock-section .subtitle,
+body.day footer {
+  color: #444;
+}
+
+body.night {
+  background-color: #0b0c1c;
+  color: #f5f5f5;
+}
+
+/* Live Clock */
+#clock-section {
+  margin-top: 4rem;
+}
+
+#live-time {
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  color: #f0f8ff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+/* Planner Section */
+#planner-section {
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.planner-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="time"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e1e2f;
+  color: #f5f5f5;
+}
+
+button {
+  background-color: #5b6dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #4b5ddd;
+}
+
+#sleep-results {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cfe3ff;
+}
+
+/* Moon visuals placeholder */
+#moon-visual {
+  margin-top: 4rem;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(ellipse at center, #fff6 20%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+#live-time.glow {
+  animation: glow-fade 0.5s ease;
+}
+
+@keyframes glow-fade {
+  0% {
+    text-shadow: 0 0 12px #88ccff;
+    color: #e0f7ff;
+  }
+  100% {
+    text-shadow: none;
+    color: #f0f8ff;
+  }
+}
+
+.sleep-time-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.sleep-time-list li {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #cfe3ff;
+}
+
+.cycle-note {
+  font-size: 0.9rem;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+#moon-visual {
+  margin-top: 3rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.moon-phase-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.moon-icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.moon-name {
+  font-size: 1rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Gentle pulsing glow */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.moon-phase-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: glow-pulse 4s ease-in-out infinite;
+  margin-top: 1rem;
+}
+
+.moon-svg {
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 6px #9ad1ff);
+  animation: moon-float 6s ease-in-out infinite;
+}
+
+.moon-name {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ccc;
+  font-style: italic;
+}
+
+/* Soft pulse + float animation */
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.03); }
+}
+
+@keyframes moon-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
